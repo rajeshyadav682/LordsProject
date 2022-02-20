@@ -19,17 +19,10 @@ namespace Reports.DataAccessLayer
 {
     public class SqlDataAccessLayer
     {
-        //protected SqlConnection dbConnection;
-        //public static readonly string _connectionString = string.Empty;
         public static readonly string _strconnectionString = string.Empty;
         static SqlDataAccessLayer()
         {
-            //_connectionString = ConfigurationManager.AppSettings["ConnectionString"].ToString();
-            _strconnectionString = WebConfigurationManager.ConnectionStrings["con"].ConnectionString;
-            //if (string.IsNullOrEmpty(_connectionString))
-            //{
-            //    throw new Exception("No connection string configured in Web.Config file");
-            //}
+            _strconnectionString = WebConfigurationManager.ConnectionStrings["con"].ConnectionString;          
             if (string.IsNullOrEmpty(_strconnectionString))
             {
                 throw new Exception("No connection string configured in Web.Config file");
