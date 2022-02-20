@@ -1,0 +1,84 @@
+﻿.DisLoginCover
+{
+	background: none repeat scroll 0 0 #000;
+    display: none;
+    float: left;
+    height: 100%;
+    left: 0;
+    opacity: 0.61;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 17000;
+   
+}
+
+.DisLoginWindow
+{
+	background-color:#f5f5f5;
+	box-shadow: 0 -8px 7px -9px rgba(0, 0, 0, 0.4) inset, -2px -2px 5px -2px rgba(0, 0, 0, 0.4);
+    display: none;
+    position: fixed;
+    top: 0;
+    z-index: 18000;
+    width:100%;
+    height:50px;
+    
+}
+
+.gradientBoxesWithOuterShadows
+{ 
+            height: 200px;
+            padding: 5px;
+            background-color: white; 
+            overflow-y:scroll;
+            background-color: #d9ffff;
+ }
+ 
+ 
+ .ListItemCssClass
+ {
+   
+  
+ }
+ 
+ .ListHighlightedItemCssClass
+ {
+  margin-left:-5px;
+  padding-left:5px;
+  background-color: #3C8DBC;
+  border: 1px solid #c8c8c8;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 14px;
+  transition: all 0.2s linear;
+  cursor:pointer;
+  
+ } 
+ 
+ .ListCssClass
+ {
+    
+    font-size: 14px;
+    border:1px solid #000;
+    font-family:Rockwell;
+    
+ }
+ 
+ .AdProHead {
+    background-color: #70BABA;
+    border-bottom: 1px solid #fff;
+    border-top: 1px solid #d9d9d9;
+    color: #313434;
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+    padding: 5px 5px 5px 15px;
+    text-align: left;
+    text-shadow: 1px 1px 1px #fff;
+    width: 100%;
+}
+ 
+ 
+ 

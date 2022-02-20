@@ -1,0 +1,320 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="DefaultMasterPage.master.cs" Inherits="DefaultMasterPage" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Payroll</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.5 -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Select2 -->
+    <link rel="stylesheet" href="plugins/select2/select2.min.css">
+    <!-- Bootstrap time Picker -->
+    <link rel="stylesheet" href="plugins/timepicker/bootstrap-timepicker.min.css">
+    <!-- bootstrap datepicker -->
+    <link rel="stylesheet" href="plugins/datepicker/datepicker3.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+    <link href="css/CloudeStyleSheet.css" rel="stylesheet" type="text/css" />
+    <script src="js/CloudeJScript.js" type="text/javascript"></script>
+    <link href="css/font-awesome-animation.min.css" rel="stylesheet" />
+    <%--<!-- lookup with multi select -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="js/jquery.sumoselect.min.js"></script>
+    <link href="css/sumoselect.css" rel="stylesheet" />--%>
+    <script type ="text/javascript">  
+        window.onload = window.history.forward(0);  //calling function on window onload
+    </script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="hold-transition skin-black sidebar-mini" >
+<div class="wrapper">
+      <header class="main-header">
+        <!-- Logo -->
+         <a id="aDefault" runat="server" href="Default.aspx" class="logo" style="/* background-color:#D9FFFF; */font-family: Edwardian Script ITC;color: darkcyan;">
+          <!-- mini logo for sidebar mini 50x50 pixels -->
+          <%--<span class="logo-mini" style="margin-top:50%;"><img src="ImageCloude/Cloude.png" width="100%" height="50%"  /></span>--%>
+        <span class="logo-mini" style="font-size: 70%;"><b>Payroll</b></span>
+          <!-- logo for regular state and mobile devices -->
+          <%--<span class="logo-lg" ><img src="ImageCloude/Cloude.png" width="61%"  /></span>--%>
+        <span class="logo-lg" style="font-size: 200%;"><b>Payroll</b></span>
+        </a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top" role="navigation">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+          </a>
+          <a id="aHome" runat="server" href="Default.aspx"><%--class="sidebar-toggle" data-toggle="offcanvas" role="button"--%>
+            <i class="fa fa-home" style="font-size:25px;color: #0662A1; padding-top: 12px;padding-bottom: 12px;padding-right: 12px;"></i>
+              <%--<span class="sr-only">Toggle navigation</span>--%>
+          </a>
+          <a href="#" style="vertical-align:super; padding-left:25%;"> <img src="Images/TEILogo.jpg"></a>
+            
+            <%--<img src="Images/TAILOGO.jpg" width="30px" height="30px" >
+                <span style=" color:white; font-size: 20px; font-weight: bold; vertical-align:bottom">Taikisha Engineering India Pvt. Ltd.</span>--%>
+
+          <%--<span style="color:white; position: absolute; text-align: center; margin: auto; width: 100%; max-width: 250px; font-size: 12px; line-height: 13px; left: 40%; top: 12px;">
+                Taikisha Engineering India Pvt. Ltd.
+                <p>14, Palam Marg, Vasant Vihar, New Delhi-110057</p>
+          </span>--%>
+          <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+              <!-- Messages: style can be found in dropdown.less-->
+             <%-- <li class="dropdown notifications-menu" >
+                 <a class="btn btn-social-icon btn-twitter" style="margin-top:5px;">
+                    <i class="fa fa-twitter"></i>
+                 </a>
+              </li>
+
+               <li class="dropdown notifications-menu" style="margin-left:5px;" >
+                <a class="btn btn-social-icon btn-facebook" style="margin-top:5px;">
+                <i class="fa fa-facebook"></i>
+                </a>
+              </li>
+
+            <li class="dropdown notifications-menu" style="margin-left:5px;" >
+                <a class="btn btn-social-icon btn-linkedin" style="margin-top:5px;">
+                <i class="fa fa-linkedin"></i>
+                </a>
+              </li>--%>
+              <!-- Notifications: style can be found in dropdown.less -->
+              <%--<li class="dropdown notifications-menu" onclick="return navigateNotification();">
+                <a href="Notification.aspx" class="dropdown-toggle" data-toggle="dropdown">
+                  <i class="fa fa-bell-o"></i>
+                  <span class="label label-warning">0</span>
+                </a>
+                
+              </li>--%>
+              <!-- Tasks: style can be found in dropdown.less -->
+              <!-- User Account: style can be found in dropdown.less -->
+              <%--<li>
+                  <a href="">Timesheet</a>
+              </li>
+                <li>
+                  <a href="">Payroll</a>
+              </li>--%>
+              <li class="dropdown user user-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <asp:Image ID="imgProffile" runat="server" CssClass="user-image" alt="User Image" />
+                  
+                  <%--<span class="hidden-xs">Ashish Mishra</span>--%>
+                  <span class="hidden-xs"><asp:Label ID="lbluser" runat="server"></asp:Label></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <!-- User image -->
+                  <li class="user-header">
+                  <asp:Image ID="imgProffile2" runat="server" CssClass="img-circle1" alt="User Image" />
+                    <%--<img id="imgProffile" runat="server" src="ImageCloude/blank.jpg" class="img-circle" alt="User Image">--%>
+                    <p>
+                     <asp:Label ID="lbluserName" runat="server"></asp:Label>
+                      <small id="lblDOJ" runat="server">Member since Nov. 2016</small>
+                    </p>
+                  </li>
+                  <!-- Menu Body -->
+                  <li class="user-body">
+                    <%--<div class="col-xs-4 text-center">
+                      <a href="#">Followers</a>
+                    </div>
+                    <div class="col-xs-4 text-center">
+                      <a href="#">Sales</a>
+                    </div>
+                    <div class="col-xs-4 text-center">
+                      <a href="#">Friends</a>
+                    </div>--%>
+                  </li>
+                  <!-- Menu Footer-->
+                  <%--<li class="user-footer">
+                     <div class="pull-left">
+                      <a href="EditEmployeeProfile.aspx" class="btn btn-default btn-flat">Edit Profile</a>
+                    </div>
+                  </li>--%>
+                  <li class="user-footer">
+                    <div class="pull-left">
+                      <a href="ChangePassword.aspx" class="btn btn-default btn-flat">Change Password</a>
+                    </div>
+                    <div class="pull-right">
+                     <a class="btn btn-default btn-flat" href="Home.aspx">Sign out</a>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <!-- Control Sidebar Toggle Button -->
+              <li style="display:none;">
+                <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!-- Left side column. contains the logo and sidebar -->
+      <aside class="main-sidebar" >
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar" >
+          <!-- Sidebar user panel -->
+          <%--<div class="user-panel">
+            <div class="pull-left image">
+              <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+            </div>
+            <div class="pull-left info">
+              <p>Ashish Mishra</p>
+              <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+            </div>
+          </div>--%>
+          <!-- search form -->
+         <%-- <form action="#" method="get" class="sidebar-form">
+            <div class="input-group">
+              <input type="text" name="q" class="form-control" placeholder="Search...">
+              <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
+              </span>
+            </div>
+          </form>--%>
+          <!-- /.search form -->
+          <!-- sidebar menu: : style can be found in sidebar.less -->
+
+         <%-- <asp:DataList ID="dtlMainMenu" runat="server" RepeatColumns="1" RepeatLayout="Flow" onitemdatabound="dtlMainMenu_ItemDataBound" >
+            <ItemTemplate>
+              <ul class="sidebar-menu">
+                <asp:Label ID="lblMenuId" runat="server" Text='<%#Eval("id") %>' style="display:none;" ></asp:Label> 
+                <li class="treeview">
+                    <a href='<%#Eval("LINK") %>' class="faa-parent animated-hover">
+                    <i class='<%#Eval("leftcss") %>'></i> <span><%#Eval("MENU_NAME") %></span>  
+                    <asp:Label ID="lblFaIcon" runat="server"  ></asp:Label>
+                    </a>
+                    <ul class='<%#Eval("Menucss") %>' >
+                      <asp:DataList ID="dtlSubMenu" runat="server" RepeatColumns="1" RepeatLayout="Flow" onitemdatabound="dtlSubMenu_ItemDataBound" >
+                        <ItemTemplate>
+                            <asp:Label ID="lblSubMenuId" runat="server" Text='<%#Eval("id") %>' style="display:none;" ></asp:Label> 
+                            <li class="treeview">
+                            <a href='<%#Eval("LINK") %>' class="faa-parent animated-hover" style="padding-left:17px; padding-top:5px; padding-bottom:5px;" >
+                                <i class='<%#Eval("leftcss") %>'></i><span><%#Eval("MENU_NAME") %></span>
+                                <asp:Label ID="lblFaIconSubMenu" runat="server"></asp:Label>
+                            </a>
+                            <ul class='<%#Eval("Menucss") %>' >
+                                <asp:DataList ID="dtlSubSubMenu" runat="server" RepeatColumns="1" >
+                                <ItemTemplate>
+                                    <a href='<%#Eval("LINK") %>'><li style="padding-left:17px; padding-top:5px; padding-bottom:5px;" class="faa-parent animated-hover"><i class='<%#Eval("leftcss") %>'></i> <%#Eval("MENU_NAME") %></li></a>
+                                </ItemTemplate>
+                                </asp:DataList>
+                            </ul>
+                            </li>
+                        </ItemTemplate>
+                      </asp:DataList>
+                    </ul>
+                </li>
+                </ul>
+            </ItemTemplate>
+          </asp:DataList>--%>
+          <div id="divMenus" runat="server">
+             <%--<ul class="sidebar-menu">
+            <li class="header">MAIN NAVIGATION</li>
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-share"></i> <span>Multilevel</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
+                <li>
+                  <a href="#"><i class="fa fa-circle-o"></i> Level One <i class="fa fa-angle-left pull-right"></i></a>
+                  <ul class="treeview-menu">
+                    <li><a href="#"><i class="fa fa-circle-o"></i> Level Two</a></li>
+                    <li>
+                      <a href="#"><i class="fa fa-circle-o"></i> Level Two <i class="fa fa-angle-left pull-right"></i></a>
+                      <ul class="treeview-menu">
+                        <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
+                        <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
+              </ul>
+            </li>
+
+                <li class="treeview">
+              <a href="#">
+                <i class="fa fa-share"></i> <span>Multilevel</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
+                <li>
+                  <a href="#"><i class="fa fa-circle-o"></i> Level One <i class="fa fa-angle-left pull-right"></i></a>
+                  <ul class="treeview-menu">
+                    <li><a href="#"><i class="fa fa-circle-o"></i> Level Two</a></li>
+                    <li>
+                      <a href="#"><i class="fa fa-circle-o"></i> Level Two <i class="fa fa-angle-left pull-right"></i></a>
+                      <ul class="treeview-menu">
+                        <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
+                        <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
+              </ul>
+            </li>
+          </ul>--%>
+          </div>
+        </section>
+        <!-- /.sidebar -->
+      </aside>
+      <form id="form1" runat="server" autocomplete="off">
+            <asp:ScriptManager ID="ScriptManager1" runat="server" AsyncPostBackTimeout="50000"></asp:ScriptManager>
+            <div class="content-wrapper" style="/*background-image:url('ImageCloude/slide_bg14.jpg');  background-repeat: no-repeat; background-position: right top;  background-attachment: fixed;*/ ">
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+            </div>
+          <footer class="main-footer">
+            <div class="pull-right hidden-xs">
+              <b>Version</b> 1.0
+            </div>
+            <strong>CorporateServe Solutions Pvt. Ltd.</strong>
+          </footer>
+    </form>
+
+      <!-- Control Sidebar -->
+    </div><!-- ./wrapper -->
+    <!-- jQuery 2.1.4 Menu sliding work-->
+    <script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    <!-- Bootstrap 3.3.5 Offer-->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="dist/js/app.min.js"></script>
+    <script src="plugins/select2/select2.full.min.js"></script>
+    <!-- bootstrap time picker -->
+    <script src="plugins/timepicker/bootstrap-timepicker.min.js"></script>
+    <!-- bootstrap datepicker -->
+    <script src="plugins/datepicker/bootstrap-datepicker.js" ></script>
+     <script>
+         $(function () {
+             //Initialize Select2 Elements
+             $(".select2").select2();
+         });
+         //Timepicker
+         $(".timepicker").timepicker({
+             showInputs: false
+         });
+         //Date picker
+         $('.datepicker').datepicker({
+             autoclose: true
+         });
+    </script>
+
+    <!--Cusomize Alert-->
+<div class="DisLoginCover" id="AlertCover" ></div>
+<div class="DisLoginWindow" id="AlertId"  >
+    <div class="alert alert-success" id="AlerContaiBlock" role="alert" style="margin-bottom:0px; text-align:center;" >
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="return ffirclose();"><span aria-hidden="true">&times;</span></button>
+      <strong ><label id="AlertHead"></label> </strong> <span id="lblAlertMsg"></span>
+    </div>
+</div>
+</body>
+</html>
